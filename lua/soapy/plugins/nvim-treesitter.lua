@@ -73,7 +73,8 @@ return {
     end, 0)
     -- keyfolding
     -- Set foldmethod to syntax (Treesitter)
-    vim.o.foldmethod = 'expr'
+    vim.o.foldmethod="expr"
     vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
+    vim.wo.foldenable=false
   end
 }
