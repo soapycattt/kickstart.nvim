@@ -20,11 +20,11 @@ end
 -- Define autocmds in a table
 local autoCommands = {
     -- Highlight on yank
-    -- YankHighlight = {
-    --     {"TextYankPost", "*", "lua vim.highlight.on_yank()"}
-    -- },
-    --
-    -- -- Other autocmds
+    YankHighlight = {
+        {"TextYankPost", "*", "lua vim.highlight.on_yank()"}
+    },
+
+    -- Other autocmds
     open_folds = {
         {"BufReadPost,FileReadPost", "*", "normal zR"}
     }
