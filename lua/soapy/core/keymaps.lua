@@ -1,3 +1,6 @@
+local default_opts = { noremap = true, silent = true }
+local expr_opts = { noremap = true, expr = true, silent = true }
+local keymap = vim.api.nvim_set_keymap
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
@@ -21,7 +24,13 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- " Use ctrl-[hjkl] to select the active split!
 -- Neovim Lua mapping for window navigation
-vim.keymap.set('n', '<C-K>', ':wincmd k<CR>', { silent = true })
-vim.keymap.set('n', '<C-J>', ':wincmd j<CR>', { silent = true })
-vim.keymap.set('n', '<C-H>', ':wincmd h<CR>', { silent = true })
-vim.keymap.set('n', '<C-L>', ':wincmd l<CR>', { silent = true })
+vim.keymap.set('n', '<C-K>', ':wincmd k<CR>', default_opts)
+vim.keymap.set('n', '<C-J>', ':wincmd j<CR>', default_opts)
+vim.keymap.set('n', '<C-H>', ':wincmd h<CR>', default_opts)
+vim.keymap.set('n', '<C-L>', ':wincmd l<CR>', default_opts)
+
+-- Resizing panes
+keymap("n", "<Left>", ":vertical resize +1<CR>", default_opts)
+keymap("n", "<Right>", ":vertical resize -1<CR>", default_opts)
+keymap("n", "<Up>", ":resize -1<CR>", default_opts)
+keymap("n", "<Down>", ":resize +1<CR>", default_opts)
