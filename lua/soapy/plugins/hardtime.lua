@@ -4,7 +4,11 @@ return {
    opts = {
       restriction_mode= "hint",
       restricted_keys = {
-         ["+"] = { "n", "x" },
+         ["h"] = {},
+         ["j"] = {},
+         ["k"] = {},
+         ["l"] = {},
+         ["+"] = {},
          ["gj"] = { "n", "x" },
          ["gk"] = { "n", "x" },
          ["<CR>"] = { "n", "x" },

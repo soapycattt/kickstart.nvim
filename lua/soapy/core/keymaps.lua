@@ -13,9 +13,8 @@ vim.g.maplocalleader = ' '
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Remap for dealing with word wrap
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
-
+keymap("n", "k", "v:count == 0 ? 'gk' : 'k'", expr_opts)
+keymap("n", "j", "v:count == 0 ? 'gj' : 'j'", expr_opts)
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
@@ -32,6 +31,6 @@ vim.keymap.set('n', '<C-L>', ':wincmd l<CR>', default_opts)
 -- Resizing panes
 keymap("n", "<Left>", ":vertical resize +1<CR>", default_opts)
 keymap("n", "<Right>", ":vertical resize -1<CR>", default_opts)
-keymap("n", "<Up>", ":resize -1<CR>", default_opts)
-keymap("n", "<Down>", ":resize +1<CR>", default_opts)
+keymap("n", "<Up>", ":resize +1<CR>", default_opts)
+keymap("n", "<Down>", ":resize -1<CR>", default_opts)
 
