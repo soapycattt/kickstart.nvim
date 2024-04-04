@@ -1,4 +1,5 @@
 return {
+  event = "BufRead",
   -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
   dependencies = {
@@ -39,6 +40,16 @@ return {
               ['if'] = '@function.inner',
               ['ac'] = '@class.outer',
               ['ic'] = '@class.inner',
+              ['ii'] = '@conditional.inner',
+              ['ai'] = '@conditional.outer',
+              ['al'] = '@loop.outer',
+              ['il'] = '@loop.inner',
+              ['ab'] = '@block.outer',
+              ['ib'] = '@block.inner',
+              -- ['ad'] = '@comment.outer',
+              -- ['id'] = '@comment.inner',
+              -- ['am'] = '@call.outer',
+              -- ['im'] = '@call.inner',
             },
           },
           move = {

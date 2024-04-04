@@ -1,5 +1,6 @@
 return {
     'gelguy/wilder.nvim',
+    event = "VeryLazy",
     requires = {'romgrk/fzy-lua-native'},
     config = function()
         local wilder = require('wilder')
