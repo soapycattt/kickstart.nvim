@@ -1,1 +1,1 @@
-require 'soapy'
+require 'lazynvim'
