@@ -71,9 +71,9 @@
       -- set keymaps
       local keymap = vim.keymap -- for conciseness
 
-      keymap.set("n", "<leader>sf", "<cmd>Telescope find_files<cr>", { desc = "[S]earch [F]iles" })
-      keymap.set("n", "<leader>sr", "<cmd>Telescope oldfiles<cr>", { desc = "[S]earch [R]ecent Files" })
-      keymap.set("n", "<leader>sb", "<cmd>Telescope buffers<cr>", { desc = "[S]earch [B]uffers" })
+      keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "[S]earch [F]iles" })
+      keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "[S]earch [R]ecent Files" })
+      keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "[S]earch [B]uffers" })
       keymap.set("n", "<leader>ss", "<cmd>Telescope live_grep<cr>", { desc = "[S]earch by [G]rep" })
       keymap.set("n", "<leader>sw", "<cmd>Telescope grep_string<cr>", { desc = '[S]earch by [W]ord' })
       keymap.set('n', '<leader>sk', "<cmd>Telescope keymaps<cr>", { desc = '[S]earch [K]eymaps' })
